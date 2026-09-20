@@ -61,9 +61,7 @@ export function Plans() {
                 </ul>
 
                 <motion.a
-                  href={whatsappUrl(
-                    `Halo Pilar Sistem, saya tertarik dengan paket ${plan.name}. Bisa minta penawaran?`,
-                  )}
+                  href={whatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03 }}

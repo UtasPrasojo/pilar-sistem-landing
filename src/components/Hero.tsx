@@ -81,7 +81,7 @@ export function Hero() {
             className="mt-9 flex flex-wrap items-center gap-3"
           >
             <motion.a
-              href={whatsappUrl("Halo Pilar Sistem, saya ingin konsultasi gratis.")}
+              href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}

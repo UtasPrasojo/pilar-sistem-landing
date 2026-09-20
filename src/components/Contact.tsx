@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { MessageCircle, Send } from "lucide-react";
 import { Reveal } from "./motion";
-import { projectTypes, whatsappUrl } from "@/lib/content";
+import { projectTypes, site, whatsappUrl } from "@/lib/content";
 
 const fieldClass =
   "w-full rounded-xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-white placeholder:text-slate-500 transition-colors focus:border-sky/60 focus:outline-none";
@@ -16,14 +16,14 @@ export function Contact() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const note = message.trim();
     const text = [
-      "Halo Pilar Sistem,",
-      `Nama saya ${name.trim()}.`,
-      `Saya butuh: ${type}.`,
-      message.trim() && `\n${message.trim()}`,
-    ]
-      .filter(Boolean)
-      .join("\n");
+      site.message,
+      "",
+      `Nama: ${name.trim()}`,
+      `Kebutuhan: ${type}`,
+      ...(note ? [`Catatan: ${note}`] : []),
+    ].join("\n");
     window.open(whatsappUrl(text), "_blank", "noopener,noreferrer");
   }
 
@@ -50,7 +50,7 @@ export function Contact() {
                 kewajiban — kami balas secepatnya lewat WhatsApp.
               </p>
               <a
-                href={whatsappUrl("Halo Pilar Sistem, saya ingin konsultasi.")}
+                href={whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-sky transition-colors hover:text-white"

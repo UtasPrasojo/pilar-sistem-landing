@@ -16,7 +16,7 @@ npm run start    # jalankan hasil build
 ## Mengubah konten
 
 Semua teks, layanan, paket, FAQ, dan nomor WhatsApp ada di satu file: `src/lib/content.ts`.
-**Ganti `site.whatsapp`** dengan nomor WhatsApp bisnis Anda (format `62812...`, tanpa `+`).
+Nomor WhatsApp (`site.whatsapp`, format `62812...` tanpa `+`) dan pesan template (`site.message`) juga diatur di sana — semua tombol pemesanan memakainya.
 
 Warna tema ada di `src/app/globals.css` (blok `@theme`).
 

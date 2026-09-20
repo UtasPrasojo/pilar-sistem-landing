@@ -20,7 +20,7 @@ export function FloatingWhatsApp() {
     <AnimatePresence>
       {visible && (
         <motion.a
-          href={whatsappUrl("Halo Pilar Sistem, saya ingin konsultasi.")}
+          href={whatsappUrl()}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat via WhatsApp"

@@ -69,7 +69,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <motion.a
-            href={whatsappUrl("Halo Pilar Sistem, saya ingin konsultasi pembuatan website.")}
+            href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}
@@ -125,7 +125,7 @@ export function Navbar() {
               ))}
             </ul>
             <a
-              href={whatsappUrl("Halo Pilar Sistem, saya ingin konsultasi pembuatan website.")}
+              href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 flex items-center justify-center gap-1.5 rounded-xl bg-blue-500 px-4 py-3 text-sm font-medium text-white"

@@ -15,13 +15,14 @@ import {
 
 export const site = {
   name: "Pilar Sistem",
-  // TODO: ganti dengan nomor WhatsApp bisnis (format internasional, tanpa "+")
-  whatsapp: "6281234567890",
+  // Nomor WhatsApp (format internasional, tanpa "+" / "0" di depan)
+  whatsapp: "6289669643272",
+  // Pesan template untuk semua tombol pemesanan / konsultasi
+  message: "Hallo saya ingin konsultasi dengan pilar sistem",
 };
 
-export function whatsappUrl(message?: string) {
-  const base = `https://wa.me/${site.whatsapp}`;
-  return message ? `${base}?text=${encodeURIComponent(message)}` : base;
+export function whatsappUrl(message: string = site.message) {
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
 export const navItems = [
